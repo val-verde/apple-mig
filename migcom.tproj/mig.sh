@@ -74,9 +74,9 @@ fi
 if [ -z "${MIGCC}" ]; then
   xcrunPath="/usr/bin/xcrun"
   if [ -x "${xcrunPath}" ]; then
-    MIGCC=`"${xcrunPath}" -sdk "$sdkRoot" -find cc`
+    MIGCC=`"${xcrunPath}" -sdk "$sdkRoot" -find clang`
   else
-    MIGCC=$(realpath "${scriptRoot}/cc")
+    MIGCC=$(realpath "${scriptRoot}/clang")
   fi
 fi
 
